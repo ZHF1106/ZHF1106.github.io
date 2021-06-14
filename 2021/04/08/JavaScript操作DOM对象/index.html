@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="某某的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>JavaScript操作DOM对象</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">Hexo</a>
+  <a class="face-img" href="/">
+    <img src="https://z3.ax1x.com/2021/03/22/6oEKkd.png">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    JavaScript操作DOM对象
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2021-04-08T06:46:49.000Z" itemprop="datePublished">2021-04-08</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2021-04-08T07:18:22.122Z" itemprop="dateUpdated">2021-04-08</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><h3 id="节点分类"><a href="#节点分类" class="headerlink" title="节点分类"></a>节点分类</h3><p><strong>元素节点：element - 节点值：1</strong><br><strong>属性节点：attribute - 节点值：2</strong><br><strong>文本节点：text - 节点值：3</strong><br><strong>注释：comments - 节点值：8</strong><br><strong>文档节点：document - 节点值：9</strong></p>
+<h3 id="节点信息"><a href="#节点信息" class="headerlink" title="节点信息"></a>节点信息</h3><p><strong>nodeName（节点名称）</strong><br><strong>nodeValue（节点值）</strong><br><strong>nodeType（节点类型）</strong></p>
+<h3 id="节点关系"><a href="#节点关系" class="headerlink" title="节点关系"></a>节点关系</h3><p><strong>根节点：documentElement</strong><br><strong>父节点：parentNode</strong><br><strong>子节点：childNodes</strong><br><strong>兄弟节点：sibling</strong><br><strong>下一个兄弟节点：nextSibling</strong><br><strong>上一个兄弟节点：previousSibling</strong><br><strong>第一个子节点：firshChild</strong><br><strong>最后一个子节点：lastChild</strong></p>
+<h2 id="节点的属性"><a href="#节点的属性" class="headerlink" title="节点的属性"></a>节点的属性</h2><h3 id="获取元素节点"><a href="#获取元素节点" class="headerlink" title="获取元素节点"></a>获取元素节点</h3><p><strong>getElementById()</strong><br><strong>getElementsByName()</strong><br><strong>getElenentsByTagName()</strong></p>
+<h3 id="操作节点的属性"><a href="#操作节点的属性" class="headerlink" title="操作节点的属性"></a>操作节点的属性</h3><p><strong>getAttribute()</strong><br><strong>setAttribute()</strong><br><strong>直接使用属性名操作：elm.value = “xxx”;</strong></p>
+<h3 id="创建和插入元素节点"><a href="#创建和插入元素节点" class="headerlink" title="创建和插入元素节点"></a>创建和插入元素节点</h3><p><strong>createElement(tagName)</strong><br><strong>appendChild()</strong><br><strong>insertBefore()</strong><br><strong>cloneNode()</strong></p>
+<h3 id="删除和替换节点"><a href="#删除和替换节点" class="headerlink" title="删除和替换节点"></a>删除和替换节点</h3><p><strong>removeChild(node)</strong><br><strong>replaceChild(newNode,oldNode)</strong></p>
+<h3 id="实现动态添加学生名单的效果案例"><a href="#实现动态添加学生名单的效果案例" class="headerlink" title="实现动态添加学生名单的效果案例"></a>实现动态添加学生名单的效果案例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	学生姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;stuName&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;添加&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;doAdd()&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;stuList&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">doAdd</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="comment">//1、创建一个p元素</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> p = <span class="built_in">document</span>.createElement(<span class="string">&quot;p&quot;</span>);</span></span><br><span class="line"><span class="javascript">		<span class="comment">//2、设置p元素的内部文本为张三</span></span></span><br><span class="line"><span class="javascript">		p.innerHTML = <span class="built_in">document</span>.getElementById(<span class="string">&quot;stuName&quot;</span>).value;</span></span><br><span class="line"><span class="javascript">		<span class="comment">//3、把p元素加到指定div里面作为最后一个子节点</span></span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.getElementById(<span class="string">&quot;stuList&quot;</span>).appendChild(p);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="元素的样式"><a href="#元素的样式" class="headerlink" title="元素的样式"></a>元素的样式</h2><p><strong>1、通过style属性作为入口</strong><br><strong>2、具体样式的属性名需要把“-”去掉，并把第二个单词首字母大写</strong><br><strong>3、样式是可读可写的</strong><br><strong>4、class属性很特殊，需要用className来操作</strong><br><strong>5、获取元素的样式（currentStyle / getComputedStyle）</strong></p>
+<h3 id="勾选复选框实现元素的隐藏和显示案例"><a href="#勾选复选框实现元素的隐藏和显示案例" class="headerlink" title="勾选复选框实现元素的隐藏和显示案例"></a>勾选复选框实现元素的隐藏和显示案例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">		<span class="selector-class">.hide</span>&#123;<span class="attribute">display</span>:none;&#125;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;chk&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;doCheck()&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span>同意本网站协议<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;btn&quot;</span> <span class="attr">class</span>=<span class="string">&quot;hide&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;下一步&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">doCheck</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> chk = <span class="built_in">document</span>.getElementById(<span class="string">&quot;chk&quot;</span>);</span></span><br><span class="line">		if(chk.checked)&#123;</span><br><span class="line"><span class="javascript">			<span class="built_in">document</span>.getElementById(<span class="string">&quot;btn&quot;</span>).className=<span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="javascript">		&#125;<span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="javascript">			<span class="built_in">document</span>.getElementById(<span class="string">&quot;btn&quot;</span>).className=<span class="string">&quot;hide&quot;</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="元素的坐标"><a href="#元素的坐标" class="headerlink" title="元素的坐标"></a>元素的坐标</h2><p><strong>offsetLeft</strong><br><strong>offsetTop</strong><br><strong>offsetHeight</strong><br><strong>offsetWidth</strong><br><strong>offsetParent</strong><br><strong>scrollTop</strong><br><strong>scrollLeft</strong><br><strong>clientWidth</strong><br><strong>clientHeight</strong></p>
+<h3 id="制作一个回顶部的案例"><a href="#制作一个回顶部的案例" class="headerlink" title="制作一个回顶部的案例"></a>制作一个回顶部的案例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;回顶部&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;gotoTop()&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">gotoTop</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.body.scrollTop = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.documentElement.scrollTop = <span class="number">0</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="常用事件"><a href="#常用事件" class="headerlink" title="常用事件"></a>常用事件</h2><p><strong>onclick</strong><br><strong>onchange</strong><br><strong>onmousedown、onmouseup</strong><br><strong>onmouseover、onmouseout、onmousemove</strong><br><strong>onkeyup、onkeydown、onkeypress</strong></p>
+<h3 id="完成鼠标移入移除div变背景色案例"><a href="#完成鼠标移入移除div变背景色案例" class="headerlink" title="完成鼠标移入移除div变背景色案例"></a>完成鼠标移入移除div变背景色案例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">	#d&#123;</span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">50px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">50px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">background</span>:red;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;d&quot;</span> <span class="attr">onmouseover</span>=<span class="string">&quot;doMo()&quot;</span> <span class="attr">onmouseout</span>=<span class="string">&quot;doMOut()&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">doMo</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.getElementById(<span class="string">&quot;d&quot;</span>).style.background=<span class="string">&quot;blue&quot;</span></span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">doMOut</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.getElementById(<span class="string">&quot;d&quot;</span>).style.background=<span class="string">&quot;red&quot;</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2021-2100 某某的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="某某的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>CSS3字体与文本样式</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">Hexo</a>
+  <a class="face-img" href="/">
+    <img src="https://z3.ax1x.com/2021/03/22/6oEKkd.png">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    CSS3字体与文本样式
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2021-03-28T14:19:25.000Z" itemprop="datePublished">2021-03-28</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2021-03-28T14:51:24.813Z" itemprop="dateUpdated">2021-03-28</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><h3 id="span标签：包裹一段文本中的字，并且通过css来控制这些字的样式（标签本身没有样式效果）"><a href="#span标签：包裹一段文本中的字，并且通过css来控制这些字的样式（标签本身没有样式效果）" class="headerlink" title="span标签：包裹一段文本中的字，并且通过css来控制这些字的样式（标签本身没有样式效果）"></a>span标签：包裹一段文本中的字，并且通过css来控制这些字的样式（标签本身没有样式效果）</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我是<span class="tag">&lt;<span class="name">span</span>&gt;</span>中国人<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="font-family：用于设置文字的字体"><a href="#font-family：用于设置文字的字体" class="headerlink" title="font-family：用于设置文字的字体"></a>font-family：用于设置文字的字体</h3><p><strong>1、字体分为中文字体与英文字体，每个字体对应一个字体文件</strong><br><strong>2、英文字体不支持中文内容，但中文字体通常都支持英文内容，可以设置多个字体，字体之间用逗号分隔</strong><br><strong>3、如果字体名称中有空格或者特殊符号，字体名称需要用引号引用</strong><br><strong>4、显示字体时会按先后顺序判断，字体不存在或者不支持会被忽略，所有字体都忽略，会使用默认字体显示</strong><br><strong>5、中文字体可以写对应的英文名，英文字体写在前面，中文字体写后面</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css"> 	<span class="selector-id">#p1</span>&#123; <span class="attribute">font-family</span>:verdana;&#125;</span></span><br><span class="line"><span class="css"> 	<span class="selector-id">#p1</span>&#123; <span class="attribute">font-family</span>:<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span></span><br><span class="line"><span class="css"> 	<span class="selector-id">#p1</span>&#123; <span class="attribute">font-family</span>:roman,<span class="string">&quot;微软雅黑&quot;</span>;&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="font-size：字体大小"><a href="#font-size：字体大小" class="headerlink" title="font-size：字体大小"></a>font-size：字体大小</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-size:30px;</span><br></pre></td></tr></table></figure>
+
+<h3 id="font-style：字体风格"><a href="#font-style：字体风格" class="headerlink" title="font-style：字体风格"></a>font-style：字体风格</h3><p><strong>1、normal：默认值，标准</strong><br><strong>2、italic：斜体</strong><br><strong>3、oblique：倾斜体</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-style:italic;</span><br></pre></td></tr></table></figure>
+
+<h3 id="font-weight：字体粗细"><a href="#font-weight：字体粗细" class="headerlink" title="font-weight：字体粗细"></a>font-weight：字体粗细</h3><p><strong>1、normal：默认值，标准</strong><br><strong>2、bold：粗体字</strong><br><strong>3、boder：更粗体字（部分字体能显示，少用）</strong><br><strong>4、lighter：更细体字（少用）</strong><br><strong>5、粗细范围：100-900，normal是400，bold是700</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-weight:bold;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文本样式"><a href="#文本样式" class="headerlink" title="文本样式"></a>文本样式</h2><h3 id="color：设置字体颜色"><a href="#color：设置字体颜色" class="headerlink" title="color：设置字体颜色"></a>color：设置字体颜色</h3><p><strong>颜色可以用具体的颜色单词来设置：red、green、blue、yellow、pink、purple…</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color:red;</span><br></pre></td></tr></table></figure>
+<p><strong>RBG，红绿蓝，三原色，有3位，每位的取值范围是0-255</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color:rgb(255,255,255);</span><br></pre></td></tr></table></figure>
+<p><strong>rgb十进制写法：rgb(0,0,0)，rgb十六进制写法：#ff00ff，如果两两相同可以简写为：#f0f</strong><br><strong>#000000是黑色，简写#000      #ffffff是白色，简写#fff</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color:#ff0000;</span><br></pre></td></tr></table></figure>
+<p><strong>rgba是透明色，有4位，前3位是rgb，第4位是透明度，值为0-1之间，0是全透明，1是不透明</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color:rgba(255,0,0,1);</span><br></pre></td></tr></table></figure>
+
+<h3 id="text-align：水平对齐方式"><a href="#text-align：水平对齐方式" class="headerlink" title="text-align：水平对齐方式"></a>text-align：水平对齐方式</h3><p><strong>1、left：左对齐，默认值</strong><br><strong>2、right：右对齐</strong><br><strong>3、center：居中（水平对齐）</strong><br><strong>4、justify：左右两端对齐（多行内容的情况下使用，且对最后一行无效）</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text-align:right;</span><br><span class="line">text-align:center;</span><br><span class="line">text-align:justify;</span><br></pre></td></tr></table></figure>
+
+<h3 id="text-indent：文本缩进"><a href="#text-indent：文本缩进" class="headerlink" title="text-indent：文本缩进"></a>text-indent：文本缩进</h3><p><strong>通常设置为2em，表示2倍距离（类型段落前空出两个字的距离）</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-indent:2em;</span><br></pre></td></tr></table></figure>
+
+<h3 id="text-decoration：文本修饰"><a href="#text-decoration：文本修饰" class="headerlink" title="text-decoration：文本修饰"></a>text-decoration：文本修饰</h3><p><strong>1、none：无文本修饰（可用在超链接默认的下划线中）</strong><br><strong>2、underline：下划线</strong><br><strong>3、overline：上划线</strong><br><strong>4、line-through：删除线</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-decoration:none;</span><br></pre></td></tr></table></figure>
+
+<h3 id="vertical-align：垂直对齐"><a href="#vertical-align：垂直对齐" class="headerlink" title="vertical-align：垂直对齐"></a>vertical-align：垂直对齐</h3><p><strong>1、top：垂直对齐的顶部</strong><br><strong>2、middle：垂直对齐的居中</strong><br><strong>3、bottem：垂直对齐的底部</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vertical-align:middle;</span><br></pre></td></tr></table></figure>
+
+<h3 id="text-shadow：文本阴影"><a href="#text-shadow：文本阴影" class="headerlink" title="text-shadow：文本阴影"></a>text-shadow：文本阴影</h3><p><strong>语法：text-shadow:color x-offset y-offset blur-radius;</strong><br><strong>1、color：颜色，如不设置默认文本颜色</strong><br><strong>2、x-offset：x轴位移，正值向右，负值向左</strong><br><strong>3、y-offset：y轴位移，正值向下，负值向上</strong><br><strong>4、blur-radius：模糊半径（越大越糊）</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-shadow:red 3px 3px 5px;</span><br></pre></td></tr></table></figure>
+
+<h3 id="line-height：行高（每一行的间距）"><a href="#line-height：行高（每一行的间距）" class="headerlink" title="line-height：行高（每一行的间距）"></a>line-height：行高（每一行的间距）</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">line-height:20px;</span><br></pre></td></tr></table></figure>
+
+<h3 id="letter-spacing：字母间距，支持中文"><a href="#letter-spacing：字母间距，支持中文" class="headerlink" title="letter-spacing：字母间距，支持中文"></a>letter-spacing：字母间距，支持中文</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">letter-spacing:5px;</span><br></pre></td></tr></table></figure>
+
+<h3 id="word-spacing：单词间距，不支持中文"><a href="#word-spacing：单词间距，不支持中文" class="headerlink" title="word-spacing：单词间距，不支持中文"></a>word-spacing：单词间距，不支持中文</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">word-spacing:30px;</span><br></pre></td></tr></table></figure>
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2021-2100 某某的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+</body>
+</html>

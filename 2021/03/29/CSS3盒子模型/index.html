@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="某某的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>CSS3盒子模型</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">Hexo</a>
+  <a class="face-img" href="/">
+    <img src="https://z3.ax1x.com/2021/03/22/6oEKkd.png">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    CSS3盒子模型
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2021-03-29T12:31:38.000Z" itemprop="datePublished">2021-03-29</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2021-03-29T13:06:49.582Z" itemprop="dateUpdated">2021-03-29</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <h2 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h2><h3 id="边框颜色：border-color"><a href="#边框颜色：border-color" class="headerlink" title="边框颜色：border-color"></a>边框颜色：border-color</h3><p><strong>单独设置上边框颜色</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-top-color:颜色;</span><br></pre></td></tr></table></figure>
+<p><strong>单独设置左边框颜色</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-left-color:颜色;</span><br></pre></td></tr></table></figure>
+<p><strong>单独设置右边框颜色</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-right-color:颜色;</span><br></pre></td></tr></table></figure>
+<p><strong>单独设置下边框颜色</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-bottom-color:颜色;</span><br></pre></td></tr></table></figure>
+<p><strong>设置四条边框颜色</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-color:颜色;</span><br></pre></td></tr></table></figure>
+<p><strong>设置上下边框颜色 左右边框颜色</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-top-color:颜色 颜色;</span><br></pre></td></tr></table></figure>
+<p><strong>设置上边框颜色 左右边框颜色 下边框颜色</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-top-color:颜色 颜色 颜色;</span><br></pre></td></tr></table></figure>
+<p><strong>按照上右下左的顺序设置颜色</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-top-color:颜色 颜色 颜色 颜色;</span><br></pre></td></tr></table></figure>
+
+<h3 id="边框粗细：border-width"><a href="#边框粗细：border-width" class="headerlink" title="边框粗细：border-width"></a>边框粗细：border-width</h3><p><strong>1、直接给具体像素值，用的最多：border-width:1px;</strong><br><strong>2、各条边框粗细不同，顺序与颜色一样：：border-width:1px 2px 3px 4px;</strong><br><strong>3、thin，细边框，相当于1px</strong><br><strong>4、medium，中边框，相当于3px</strong><br><strong>5、thick，粗边框，相当于5px</strong></p>
+<h3 id="边框样式：border-style"><a href="#边框样式：border-style" class="headerlink" title="边框样式：border-style"></a>边框样式：border-style</h3><p><strong>1、dotted，点线</strong><br><strong>2、dashed，虚线</strong><br><strong>3、solid，实线</strong><br><strong>4、none，无样式，边框消失</strong></p>
+<h3 id="边框的简写"><a href="#边框的简写" class="headerlink" title="边框的简写"></a>边框的简写</h3><p><strong>同时设置四条边框的三个属性</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border:粗细 样式 颜色;</span><br></pre></td></tr></table></figure>
+<p><strong>同时设置顶部边框的三个属性</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-top:颜色 粗细 样式;</span><br></pre></td></tr></table></figure>
+<p><strong>三个属性值的顺序可以随意调换</strong></p>
+<h2 id="外边距"><a href="#外边距" class="headerlink" title="外边距"></a>外边距</h2><h3 id="外边距：每个元素都有四个外边距"><a href="#外边距：每个元素都有四个外边距" class="headerlink" title="外边距：每个元素都有四个外边距"></a>外边距：每个元素都有四个外边距</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">margin-top</span><br><span class="line">margin-right</span><br><span class="line">margin-bottom</span><br><span class="line">margin-left</span><br></pre></td></tr></table></figure>
+<p><strong>两个label隔开</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-id">#bn1</span>&#123;<span class="attribute">margin-right</span>:<span class="number">20px</span>;&#125;</span></span><br><span class="line"><span class="css">	<span class="selector-id">#bn2</span>&#123;<span class="attribute">margin-left</span>:<span class="number">20px</span>;&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">&quot;bn1&quot;</span>&gt;</span>我爱中国<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">&quot;bn2&quot;</span>&gt;</span>你好中国<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>浏览器给每个元素都设置了默认的外边距值，导致元素不能紧贴body，不同浏览器的默认边距值不同，可能导致页面排版效果不能兼容各种浏览器，解决的方法就是清零外边距，通过并集选择器实现</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body,div,label,table......&#123;margin:0px;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="内边距"><a href="#内边距" class="headerlink" title="内边距"></a>内边距</h2><h3 id="内边距：也分四个方向，用法与margin相同"><a href="#内边距：也分四个方向，用法与margin相同" class="headerlink" title="内边距：也分四个方向，用法与margin相同"></a>内边距：也分四个方向，用法与margin相同</h3><p><strong>完成一个带标题栏的登陆页面</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">body</span>&#123;<span class="attribute">margin</span>:<span class="number">0</span>;<span class="attribute">padding</span>:<span class="number">0</span>;&#125;</span></span><br><span class="line">	.loginPanel&#123;</span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">1px</span> solid black;</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">250px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">margin</span>:<span class="number">50px</span> auto;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-class">.loginPanel</span> <span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background</span>:gray;</span></span><br><span class="line"><span class="css">		<span class="attribute">color</span>:<span class="number">#fff</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">font-size</span>:<span class="number">22px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">padding</span>:<span class="number">10px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-class">.loginPanel</span> <span class="selector-tag">section</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background</span>:<span class="number">#eee</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-class">.loginPanel</span> <span class="selector-tag">section</span> <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">padding</span>:<span class="number">20px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-class">.loginPanel</span> <span class="selector-tag">input</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">150px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">25px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;loginPanel&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">h1</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">label</span>&gt;</span>账号：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">input</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">label</span>&gt;</span>密码：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">input</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="盒子模型的概念与尺寸"><a href="#盒子模型的概念与尺寸" class="headerlink" title="盒子模型的概念与尺寸"></a>盒子模型的概念与尺寸</h2><h3 id="盒子模型的概念"><a href="#盒子模型的概念" class="headerlink" title="盒子模型的概念"></a>盒子模型的概念</h3><p><strong>border：边框</strong><br><strong>margin：外边距（边框和边框之间的距离）</strong><br><strong>padding：内边距（内容和边框之间的距离）</strong><br><strong>content：内容（位于最中间，网页的主要内容）</strong></p>
+<h3 id="盒子模型的尺寸"><a href="#盒子模型的尺寸" class="headerlink" title="盒子模型的尺寸"></a>盒子模型的尺寸</h3><p><strong>盒子大小内盒总尺寸计算公式：border(左右/上下) + padding(左右/上下) + 内容宽度</strong><br><strong>定义盒子模型尺寸的解析方式：box-sizing</strong><br><strong>content-box：传统计算方式</strong><br><strong>border-box：以width属性值作为元素的总宽度</strong><br><strong>边框 x 2 + 内边距 x 2 + 内容的宽度</strong><br><strong>4        + 40        + 106（Chrome里F12查看）=150</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">width:150px;</span><br><span class="line">border:2px solid black;</span><br><span class="line">padding:20px;</span><br><span class="line">box-sizing:border-box;</span><br></pre></td></tr></table></figure>
+
+<h2 id="圆角边框和盒子阴影"><a href="#圆角边框和盒子阴影" class="headerlink" title="圆角边框和盒子阴影"></a>圆角边框和盒子阴影</h2><h3 id="圆角边框：border-radius（边框半径）"><a href="#圆角边框：border-radius（边框半径）" class="headerlink" title="圆角边框：border-radius（边框半径）"></a>圆角边框：border-radius（边框半径）</h3><p><strong>左上 右上 右下 左下</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius:数值px 数值px 数值px 数值px;</span><br></pre></td></tr></table></figure>
+<p><strong>左上 右上和左下 右下</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius:数值px 数值px 数值px;</span><br></pre></td></tr></table></figure>
+<p><strong>单独设置左上</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-top-left-radius:数值px;</span><br></pre></td></tr></table></figure>
+
+<h3 id="特殊图形"><a href="#特殊图形" class="headerlink" title="特殊图形"></a>特殊图形</h3><p><strong>扇形</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius:0 0 0 100%;</span><br></pre></td></tr></table></figure>
+<p><strong>圆形</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius:50%;</span><br></pre></td></tr></table></figure>
+<p><strong>半圆</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width:100px; height:50px; border-radius:50px 50px 0 0;</span><br></pre></td></tr></table></figure>
+
+<h3 id="盒子阴影：box-shadow"><a href="#盒子阴影：box-shadow" class="headerlink" title="盒子阴影：box-shadow"></a>盒子阴影：box-shadow</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow:inset x-offset y-offset blur-radius color;</span><br></pre></td></tr></table></figure>
+<p><strong>inset：阴影类型，不加表示外阴影，加了表示内阴影</strong><br><strong>x-offset/y-offset：阴影的偏移量，可正可负</strong><br><strong>blur-radius：阴影的模糊程度</strong></p>
+<p><strong>x、y为0显示的是阴影环绕效果</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow:0 0 13px blue;</span><br></pre></td></tr></table></figure>
+
+<p><strong>内阴影</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow:inset 5px 5px 13px;</span><br></pre></td></tr></table></figure>
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2021-2100 某某的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+</body>
+</html>

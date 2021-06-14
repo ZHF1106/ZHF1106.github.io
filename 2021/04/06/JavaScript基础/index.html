@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="某某的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>JavaScript基础</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">Hexo</a>
+  <a class="face-img" href="/">
+    <img src="https://z3.ax1x.com/2021/03/22/6oEKkd.png">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    JavaScript基础
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2021-04-06T14:38:04.000Z" itemprop="datePublished">2021-04-06</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2021-04-06T15:08:51.622Z" itemprop="dateUpdated">2021-04-06</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="变量的数据类型"><a href="#变量的数据类型" class="headerlink" title="变量的数据类型"></a>变量的数据类型</h3><p><strong>undefined：未定义</strong><br><strong>null：空</strong><br><strong>number：数值类型</strong><br><strong>boolean：布尔类型</strong><br><strong>Object：对象类型</strong><br><strong>String：字符串类型</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var name = &quot;zhangsan&quot;;</span><br></pre></td></tr></table></figure>
+<p><strong>字符串长度</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(name.length);</span><br></pre></td></tr></table></figure>
+<p><strong>从前往后找</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(name.indexOf(&quot;zh&quot;));</span><br></pre></td></tr></table></figure>
+<p><strong>从后往前找</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(name.lastIndexOf(&quot;an&quot;));</span><br></pre></td></tr></table></figure>
+<p><strong>大写</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(name.toUpperCase());</span><br></pre></td></tr></table></figure>
+<p><strong>小写</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(name.toLowerCase());</span><br></pre></td></tr></table></figure>
+<p><strong>下标</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(name.substring(1,4));</span><br></pre></td></tr></table></figure>
+<p><strong>以逗号拆分字符串，显示下标为1的</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(names[1]);</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [];</span><br><span class="line">var names = [&quot;zhangsan&quot;,&quot;lisi&quot;];</span><br><span class="line">var arr = new Array(&quot;aa&quot;,&quot;bb&quot;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr[0] = 22;</span><br><span class="line">arr.push(22);</span><br><span class="line">arr[arr.length] = 22;</span><br></pre></td></tr></table></figure>
+
+<h3 id="访问数组：使用下标"><a href="#访问数组：使用下标" class="headerlink" title="访问数组：使用下标"></a>访问数组：使用下标</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr[0]</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取数组长度"><a href="#获取数组长度" class="headerlink" title="获取数组长度"></a>获取数组长度</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(arr.length);</span><br></pre></td></tr></table></figure>
+
+<h3 id="连接元素"><a href="#连接元素" class="headerlink" title="连接元素"></a>连接元素</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var name = arr.join(&quot;-&quot;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="按首字母排序"><a href="#按首字母排序" class="headerlink" title="按首字母排序"></a>按首字母排序</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.sort();</span><br></pre></td></tr></table></figure>
+
+<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p><code>+</code><br><code>-</code><br><code>*</code><br><code>/</code><br><code>+=</code><br><code>-=</code><br><code>++</code><br><code>--</code><br><code>&gt;</code><br><code>&lt;</code><br><code>&gt;=</code><br><code>&lt;=</code><br><code>&amp;&amp;</code><br><code>||</code><br><code>!</code></p>
+<p><strong>if-else循环</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var age = 23;</span><br><span class="line">if(age &gt; 22)&#123;</span><br><span class="line">    console.log(&quot;大于&quot;);</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    console.log(&quot;小于&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>switch循环</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var grade = &quot;C&quot;;</span><br><span class="line">switch(grade)&#123;</span><br><span class="line">    case&quot;A&quot;:console.log(&quot;优&quot;);break;</span><br><span class="line">    case&quot;B&quot;:console.log(&quot;良&quot;);break;</span><br><span class="line">    case&quot;C&quot;:console.log(&quot;中&quot;);break;</span><br><span class="line">    default:console.log(&quot;不及格&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>for循环</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for(var i=0; i&lt;100; i++)&#123;</span><br><span class="line">    document.write(&quot;<span class="tag">&lt;<span class="name">p</span>&gt;</span>I love you<span class="tag">&lt;/<span class="name">p</span>&gt;</span>&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for(var i=1980; i&lt;=2020; i++)&#123;</span><br><span class="line">    document.write(&quot;<span class="tag">&lt;<span class="name">option</span>&gt;</span>&quot;+ i +&quot;<span class="tag">&lt;/<span class="name">option</span>&gt;</span>&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>while循环</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var sum = 0;</span><br><span class="line">var i = 0;</span><br><span class="line">while(i&lt;=100)&#123;</span><br><span class="line">    sum += i;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line">console.log(sum);</span><br></pre></td></tr></table></figure>
+<p><strong>for in循环</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var names = [&quot;lily&quot;, &quot;lucy&quot;, &quot;tom&quot;];</span><br><span class="line">for(var i in names)&#123;</span><br><span class="line">    console.log(names[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>中断循环：break、continue</strong></p>
+<h2 id="系统函数"><a href="#系统函数" class="headerlink" title="系统函数"></a>系统函数</h2><h3 id="parseInt-：用于把字符串或者小数转换为整数"><a href="#parseInt-：用于把字符串或者小数转换为整数" class="headerlink" title="parseInt()：用于把字符串或者小数转换为整数"></a>parseInt()：用于把字符串或者小数转换为整数</h3><h3 id="parseFloat-：转换为小数，用法与parseInt一致"><a href="#parseFloat-：转换为小数，用法与parseInt一致" class="headerlink" title="parseFloat()：转换为小数，用法与parseInt一致"></a>parseFloat()：转换为小数，用法与parseInt一致</h3><h3 id="isNaN-：判断字符串是否能转成数字"><a href="#isNaN-：判断字符串是否能转成数字" class="headerlink" title="isNaN()：判断字符串是否能转成数字"></a>isNaN()：判断字符串是否能转成数字</h3><h3 id="NaN：not-a-number"><a href="#NaN：not-a-number" class="headerlink" title="NaN：not a number"></a>NaN：not a number</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var num = 22.98;</span><br><span class="line">console.log(parseInt(num));</span><br><span class="line">console.log(parseInt(&quot;22.98&quot;));</span><br><span class="line">console.log(parseInt(&quot;ABC&quot;));</span><br><span class="line">console.log(parseInt(&quot;22.98abc&quot;));</span><br></pre></td></tr></table></figure>
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2021-2100 某某的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+</body>
+</html>

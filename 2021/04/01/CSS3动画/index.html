@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="某某的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>CSS3动画</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">Hexo</a>
+  <a class="face-img" href="/">
+    <img src="https://z3.ax1x.com/2021/03/22/6oEKkd.png">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    CSS3动画
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2021-04-01T14:16:26.000Z" itemprop="datePublished">2021-04-01</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2021-04-01T14:46:36.083Z" itemprop="dateUpdated">2021-04-01</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <h2 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h2><h3 id="transform：变形"><a href="#transform：变形" class="headerlink" title="transform：变形"></a>transform：变形</h3><p><strong>一次可使用多个变形函数，多个之间空格隔开</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transform:rotate(45deg) translate(50px,50px) scale(2) skew(-20deg,-20deg);</span><br></pre></td></tr></table></figure>
+
+<h3 id="translate-x-y-：平移，位移"><a href="#translate-x-y-：平移，位移" class="headerlink" title="translate(x,y)：平移，位移"></a>translate(x,y)：平移，位移</h3><p><strong>1、x控制在x轴偏移，y控制在y轴偏移，可正可负</strong><br><strong>2、可以通过translateX(),translateY()单独设置</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transform:translate(50px,50px);</span><br></pre></td></tr></table></figure>
+
+<h3 id="scale-x-y-：缩放"><a href="#scale-x-y-：缩放" class="headerlink" title="scale(x,y)：缩放"></a>scale(x,y)：缩放</h3><p><strong>1、x控制宽度的缩放，y控制高度的缩放</strong><br><strong>2、只放一个值的时候，第二个值默认和第一个值相等</strong><br><strong>3、可以通过scaleX(),scaleY()单独设置</strong><br><strong>4、x，y的值是0-0.99的任意值，表示缩小，1以上的值表示放大倍数</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transform:scale(2);</span><br></pre></td></tr></table></figure>
+
+<h3 id="skew-x-y-：倾斜"><a href="#skew-x-y-：倾斜" class="headerlink" title="skew(x,y)：倾斜"></a>skew(x,y)：倾斜</h3><p><strong>1、x控制水平方向的倾斜角度，y控制垂直方向的倾斜角度，可正可负</strong><br><strong>2、单位是deg：度数，即角度的大小</strong><br><strong>3、可以通过skewX(),skewY()单独设置</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transform:skew(-20deg,-20deg);</span><br></pre></td></tr></table></figure>
+
+<h3 id="rotate-x-：旋转（以物体中心点）"><a href="#rotate-x-：旋转（以物体中心点）" class="headerlink" title="rotate(x)：旋转（以物体中心点）"></a>rotate(x)：旋转（以物体中心点）</h3><p><strong>1、x为正数，是顺时针旋转，x为负数，是逆时针旋转</strong><br><strong>2、单位是deg：度数，即角度的大小</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-transform:rotate(45deg);</span><br></pre></td></tr></table></figure>
+
+<h2 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h2><h3 id="transition：过渡，转变"><a href="#transition：过渡，转变" class="headerlink" title="transition：过渡，转变"></a>transition：过渡，转变</h3><p><strong>指定需要过渡效果的属性，可以是width、height、background或者用all，表示全部属性</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition-property:all;</span><br></pre></td></tr></table></figure>
+
+<p><strong>1、定义过渡的时间长度</strong><br><strong>2、单位是秒，为s表示</strong><br><strong>3、时间越短表示速度越快，可以有小数值</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition-duration:2.5s;</span><br></pre></td></tr></table></figure>
+
+<p><strong>设置动画的快慢方式，即初始状态过渡到终止状态时的效果</strong><br><strong>默认值，速度由快到慢</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition-timing-function:ease;</span><br></pre></td></tr></table></figure>
+<p><strong>匀速运动</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition-timing-function:liner;</span><br></pre></td></tr></table></figure>
+<p><strong>慢——快</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition-timing-function:ease-in;</span><br></pre></td></tr></table></figure>
+<p><strong>快——慢</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition-timing-function:ease-out;</span><br></pre></td></tr></table></figure>
+<p><strong>慢——快——慢</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition-timing-function:ease-in-out;</span><br></pre></td></tr></table></figure>
+
+<p><strong>1、设置过渡效果开始前的等待时间</strong><br><strong>2、单位是秒，为s表示</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition-delay:0.5s;</span><br></pre></td></tr></table></figure>
+
+<h3 id="过渡的触发机制"><a href="#过渡的触发机制" class="headerlink" title="过渡的触发机制"></a>过渡的触发机制</h3><p><strong>鼠标触摸时</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div:hover&#123;......&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>鼠标点击时</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div:active&#123;......&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>复选框点击时</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div:checked&#123;......&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>成为焦点时</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div:focus&#123;......&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><h3 id="animation动画可以控制和设置动画的整个过程，类似于flash动画，通过帧来控制"><a href="#animation动画可以控制和设置动画的整个过程，类似于flash动画，通过帧来控制" class="headerlink" title="animation动画可以控制和设置动画的整个过程，类似于flash动画，通过帧来控制"></a>animation动画可以控制和设置动画的整个过程，类似于flash动画，通过帧来控制</h3><p><strong>1、通过关键帧（keyframes）来声明动画</strong><br><strong>2、通过animation调用关键帧动画</strong><br><strong>3、通过@keyframes来声明动画，设置关键帧（name是名字）</strong></p>
+<p><strong>语法1</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@keyframes name&#123;</span><br><span class="line">	from&#123;css样式&#125;;</span><br><span class="line">	percentage&#123;css样式&#125;;</span><br><span class="line">	to&#123;css样式&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>语法2</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@keyframes name&#123;</span><br><span class="line">	0%&#123;css样式&#125;;</span><br><span class="line">	33%&#123;css样式&#125;;</span><br><span class="line">	66%&#123;css样式&#125;;</span><br><span class="line">	100%&#123;css样式&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="调用关键帧"><a href="#调用关键帧" class="headerlink" title="调用关键帧"></a>调用关键帧</h3><p><strong>animation-name：调用由@keyframes定义的动画（name是@keyframes设置的名字）</strong></p>
+<p><strong>animation-duration：动画时长</strong></p>
+<p><strong>animation-delay：动画延迟时间</strong></p>
+<p><strong>animation-timing-function：动画快慢</strong></p>
+<p><strong>animation-iteration-count：动画播放次数，默认为1，infinite表示无限无穷</strong></p>
+<p><strong>animation-direction</strong><br>  默认是normal表示正向播放，reverse表示反向播放<br>  alternate表示交替播放，奇数正向，偶数反向，与infinite联用</p>
+<p><strong>animation-play-state：动画的播放状态，播放running和暂停paused</strong></p>
+<p><strong>animation-fill-mode：动画播放结束后的操作</strong><br>  backwards：在动画等待时，元素的样式设置为动画第一帧的样式<br>  forwards：在动画结束后，元素的样式设置为动画最后一帧的样式<br>  both：同时配置backwards和forwards的样式</p>
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2021-2100 某某的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+</body>
+</html>

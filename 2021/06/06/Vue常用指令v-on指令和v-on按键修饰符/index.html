@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="某某的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>Vue常用指令v-on指令和v-on按键修饰符</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">Hexo</a>
+  <a class="face-img" href="/">
+    <img src="https://z3.ax1x.com/2021/03/22/6oEKkd.png">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    Vue常用指令v-on指令和v-on按键修饰符
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2021-06-06T09:07:22.000Z" itemprop="datePublished">2021-06-06</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2021-06-06T09:25:43.048Z" itemprop="dateUpdated">2021-06-06</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <h2 id="v-on指令专门用于给元素绑定监听事件，绑定事件被触发后，会去Vue实例对象的methods中查找对应的回调函数"><a href="#v-on指令专门用于给元素绑定监听事件，绑定事件被触发后，会去Vue实例对象的methods中查找对应的回调函数" class="headerlink" title="v-on指令专门用于给元素绑定监听事件，绑定事件被触发后，会去Vue实例对象的methods中查找对应的回调函数"></a>v-on指令专门用于给元素绑定监听事件，绑定事件被触发后，会去Vue实例对象的methods中查找对应的回调函数</h2><h3 id="v-on指令格式"><a href="#v-on指令格式" class="headerlink" title="v-on指令格式"></a>v-on指令格式</h3><p><strong>v-on：事件名称=”回调函数名称”</strong><br><strong>@事件名称=”回调函数名称”</strong></p>
+<h3 id="通过v-on来绑定监听事件，在指定事件名称的时候不需要写on"><a href="#通过v-on来绑定监听事件，在指定事件名称的时候不需要写on" class="headerlink" title="通过v-on来绑定监听事件，在指定事件名称的时候不需要写on"></a>通过v-on来绑定监听事件，在指定事件名称的时候不需要写on</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;myFn&quot;</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="通过v-on来绑定监听事件，在赋值的时候必须一个回调函数的名称"><a href="#通过v-on来绑定监听事件，在赋值的时候必须一个回调函数的名称" class="headerlink" title="通过v-on来绑定监听事件，在赋值的时候必须一个回调函数的名称"></a>通过v-on来绑定监听事件，在赋值的时候必须一个回调函数的名称</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;myFn&quot;</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="尝试一下"><a href="#尝试一下" class="headerlink" title="尝试一下"></a>尝试一下</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">		可放入以上不同方式的button标签来实现不同的结果</span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">let</span> vue = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">			el:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line">			data:&#123;</span><br><span class="line">					</span><br><span class="line">			&#125;,</span><br><span class="line">			methods:&#123;</span><br><span class="line"><span class="javascript">				<span class="function"><span class="title">myFn</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">					alert(<span class="string">&#x27;lsp&#x27;</span>)</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="v-on修饰符：处理事件中的事件冒泡，事件捕获，阻止默认行为等"><a href="#v-on修饰符：处理事件中的事件冒泡，事件捕获，阻止默认行为等" class="headerlink" title="v-on修饰符：处理事件中的事件冒泡，事件捕获，阻止默认行为等"></a>v-on修饰符：处理事件中的事件冒泡，事件捕获，阻止默认行为等</h2><h3 id="once：默认情况下事件的回调函数可以反复执行，once只触发一次回调"><a href="#once：默认情况下事件的回调函数可以反复执行，once只触发一次回调" class="headerlink" title="once：默认情况下事件的回调函数可以反复执行，once只触发一次回调"></a>once：默认情况下事件的回调函数可以反复执行，once只触发一次回调</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click.once</span>=<span class="string">&quot;myFn&quot;</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="prevent：阻止元素默认行为"><a href="#prevent：阻止元素默认行为" class="headerlink" title="prevent：阻止元素默认行为"></a>prevent：阻止元素默认行为</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.baidu.com&quot;</span> <span class="attr">v-on:click.prevent</span>=<span class="string">&quot;myFn&quot;</span>&gt;</span>默认跳转到百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="尝试一下-1"><a href="#尝试一下-1" class="headerlink" title="尝试一下"></a>尝试一下</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">		可放入以上不同方式的button标签与a标签来实现不同的结果</span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">let</span> vue = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">			el:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line">			data:&#123;</span><br><span class="line">					</span><br><span class="line">			&#125;,</span><br><span class="line">			methods:&#123;</span><br><span class="line"><span class="javascript">				<span class="function"><span class="title">myFn</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">					alert(<span class="string">&#x27;lsp&#x27;</span>)</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="stop：阻止事件冒泡"><a href="#stop：阻止事件冒泡" class="headerlink" title="stop：阻止事件冒泡"></a>stop：阻止事件冒泡</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;myFn1&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;b&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;myFn2&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span> @<span class="attr">click.stop</span>=<span class="string">&quot;myFn3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="self：使用后回调只有当前元素触发事件的时候才执行"><a href="#self：使用后回调只有当前元素触发事件的时候才执行" class="headerlink" title="self：使用后回调只有当前元素触发事件的时候才执行"></a>self：使用后回调只有当前元素触发事件的时候才执行</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;myFn1&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;b&quot;</span> @<span class="attr">click.self</span>=<span class="string">&quot;myFn2&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;myFn3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="capture：默认情况下是事件冒泡，使用后变成事件捕获"><a href="#capture：默认情况下是事件冒泡，使用后变成事件捕获" class="headerlink" title="capture：默认情况下是事件冒泡，使用后变成事件捕获"></a>capture：默认情况下是事件冒泡，使用后变成事件捕获</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;myFn1&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;b&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;myFn2&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span> @<span class="attr">click.capture</span>=<span class="string">&quot;myFn3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="尝试一下-2"><a href="#尝试一下-2" class="headerlink" title="尝试一下"></a>尝试一下</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../vue js/vue.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">			* &#123;</span><br><span class="line"><span class="css">				<span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			.a &#123;</span><br><span class="line"><span class="css">				<span class="attribute">width</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">height</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">background</span>: <span class="number">#7274A7</span>;</span></span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			.b &#123;</span><br><span class="line"><span class="css">				<span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">background</span>: <span class="number">#0066CC</span>;</span></span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			.c &#123;</span><br><span class="line"><span class="css">				<span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">				<span class="attribute">background</span>: <span class="number">#008855</span>;</span></span><br><span class="line">			&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">			可放入以上不同方式的div标签来实现不同的结果</span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">			<span class="keyword">let</span> vue = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">				el:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line">				data:&#123;</span><br><span class="line">					</span><br><span class="line">				&#125;,</span><br><span class="line">				methods:&#123;</span><br><span class="line"><span class="javascript">					<span class="function"><span class="title">myFn1</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">						<span class="built_in">console</span>.log(<span class="string">&quot;爷爷&quot;</span>);</span></span><br><span class="line">					&#125;,</span><br><span class="line"><span class="javascript">					<span class="function"><span class="title">myFn2</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">						<span class="built_in">console</span>.log(<span class="string">&quot;爸爸&quot;</span>);</span></span><br><span class="line">					&#125;,</span><br><span class="line"><span class="javascript">					<span class="function"><span class="title">myFn3</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">						<span class="built_in">console</span>.log(<span class="string">&quot;儿子&quot;</span>);</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)</span><br><span class="line">		<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="绑定回调函数名称的时候，后面可以写-也可以不写"><a href="#绑定回调函数名称的时候，后面可以写-也可以不写" class="headerlink" title="绑定回调函数名称的时候，后面可以写()也可以不写"></a>绑定回调函数名称的时候，后面可以写()也可以不写</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;myFn(&#x27;lsp&#x27;,20,$event)&quot;</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="可以绑定的回调函数传递参数"><a href="#可以绑定的回调函数传递参数" class="headerlink" title="可以绑定的回调函数传递参数"></a>可以绑定的回调函数传递参数</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(name,age,e);</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果在绑定的函数中需要用到data中的数据必须加上this"><a href="#如果在绑定的函数中需要用到data中的数据必须加上this" class="headerlink" title="如果在绑定的函数中需要用到data中的数据必须加上this"></a>如果在绑定的函数中需要用到data中的数据必须加上this</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(this.gender);</span><br></pre></td></tr></table></figure>
+
+<h3 id="尝试一下-3"><a href="#尝试一下-3" class="headerlink" title="尝试一下"></a>尝试一下</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">		可放入以上button标签来实现结果</span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">let</span> vue = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">			el:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line">			data:&#123;</span><br><span class="line"><span class="javascript">				gender:<span class="string">&quot;man&quot;</span></span></span><br><span class="line">			&#125;,</span><br><span class="line">			methods:&#123;</span><br><span class="line"><span class="javascript">				<span class="function"><span class="title">myFn</span>(<span class="params">name,age,e</span>)</span>&#123;</span></span><br><span class="line">					可放入以上不同的控制台打印来实现不同的结果</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="按钮修饰符：监听当前事件是否有特定按键触发了事件"><a href="#按钮修饰符：监听当前事件是否有特定按键触发了事件" class="headerlink" title="按钮修饰符：监听当前事件是否有特定按键触发了事件"></a>按钮修饰符：监听当前事件是否有特定按键触发了事件</h2><h3 id="系统预定义修饰符：监听当前事件是否是回车触发的"><a href="#系统预定义修饰符：监听当前事件是否是回车触发的" class="headerlink" title="系统预定义修饰符：监听当前事件是否是回车触发的"></a>系统预定义修饰符：监听当前事件是否是回车触发的</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> @<span class="attr">keyup.enter</span>=<span class="string">&quot;myFn&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义修饰符：自定义F2为修饰符"><a href="#自定义修饰符：自定义F2为修饰符" class="headerlink" title="自定义修饰符：自定义F2为修饰符"></a>自定义修饰符：自定义F2为修饰符</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> @<span class="attr">keyup.113</span>=<span class="string">&quot;myFn&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义修饰符：全局定义F2为修饰符"><a href="#自定义修饰符：全局定义F2为修饰符" class="headerlink" title="自定义修饰符：全局定义F2为修饰符"></a>自定义修饰符：全局定义F2为修饰符</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> @<span class="attr">keyup.f2</span>=<span class="string">&quot;myFn&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="尝试一下-4"><a href="#尝试一下-4" class="headerlink" title="尝试一下"></a>尝试一下</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">		可放入以上不同方式的input标签来实现不同的结果</span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">		<span class="comment">/* 全局定义 */</span></span></span><br><span class="line">		Vue.config.keyCodes.f2 = 113</span><br><span class="line"><span class="javascript">		<span class="keyword">let</span> vue = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">			el:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line">			data:&#123;</span><br><span class="line">					</span><br><span class="line">			&#125;,</span><br><span class="line">			methods:&#123;</span><br><span class="line"><span class="javascript">				<span class="function"><span class="title">myFn</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">					alert(<span class="string">&quot;lsp&quot;</span>);</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2021-2100 某某的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+</body>
+</html>
